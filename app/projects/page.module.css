@@ -1,0 +1,161 @@
+.dashboard {
+  background: var(--color-forest);
+  padding-block: var(--space-4xl);
+  scroll-margin-top: var(--header-height);
+}
+
+.dashboard .sectionTitle {
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+}
+
+.dashboard .sectionLabel {
+  color: var(--color-gold);
+}
+
+.dashboardIntro {
+  color: rgba(216, 198, 165, 0.9);
+  margin-bottom: var(--space-2xl);
+  max-width: 36rem;
+}
+
+.metricList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  margin-top: var(--space-2xl);
+}
+
+.metric {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.metricReverse {
+  direction: rtl;
+}
+
+.metricReverse > * {
+  direction: ltr;
+}
+
+.metricImage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.metricValue {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  color: var(--color-gold-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.metricCopy h3 {
+  margin-bottom: var(--space-md);
+}
+
+.metricCopy p {
+  color: var(--color-charcoal-soft);
+  font-size: var(--text-lg);
+  line-height: var(--line-relaxed);
+}
+
+.report {
+  background: var(--color-sand);
+}
+
+.reportInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.reportInner p {
+  color: var(--color-charcoal-soft);
+  max-width: 32rem;
+  margin-top: var(--space-md);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.alt {
+  background: var(--color-white);
+}
+
+.beforeAfter {
+  background: var(--color-ivory);
+}
+
+.beforeAfterIntro {
+  margin-bottom: var(--space-2xl);
+  color: var(--color-charcoal-soft);
+  font-size: var(--text-lg);
+}
+
+.gallery {
+  background: var(--color-white);
+}
+
+.video {
+  background: var(--color-forest);
+}
+
+.video h2 {
+  color: var(--color-white);
+}
+
+.video .sectionLabel {
+  color: var(--color-gold);
+}
+
+.videoWrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.videoWrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .metric,
+  .metricReverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

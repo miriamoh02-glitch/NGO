@@ -1,0 +1,352 @@
+.mission {
+  background: var(--color-ivory);
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(var(--space-2xl), 6vw, var(--space-5xl));
+  align-items: start;
+}
+
+.missionCopy p {
+  color: var(--color-charcoal-soft);
+  margin-bottom: var(--space-lg);
+  font-size: var(--text-lg);
+  line-height: var(--line-relaxed);
+}
+
+.missionVisual {
+  position: relative;
+}
+
+.missionImageMain {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+.missionImg {
+  object-fit: cover;
+}
+
+.missionQuote {
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  max-width: 18rem;
+  padding: var(--space-lg);
+  background: var(--color-forest);
+  color: var(--color-sand);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: var(--line-relaxed);
+  box-shadow: var(--shadow-lg);
+}
+
+.missionQuote cite {
+  display: block;
+  margin-top: var(--space-md);
+  font-size: var(--text-xs);
+  font-style: normal;
+  font-family: var(--font-body);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.projects {
+  background: var(--color-white);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.stats {
+  background: var(--color-forest);
+  color: var(--color-sand);
+}
+
+.statsLabel {
+  color: var(--color-gold);
+}
+
+.statsTitle {
+  color: var(--color-white);
+  margin-bottom: var(--space-2xl);
+}
+
+.communities {
+  background: var(--color-ivory);
+}
+
+.storyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  margin-top: var(--space-3xl);
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.storyReverse {
+  direction: rtl;
+}
+
+.storyReverse > * {
+  direction: ltr;
+}
+
+.storyImage {
+  position: relative;
+  aspect-ratio: 7 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.storyImg {
+  object-fit: cover;
+}
+
+.storyStat {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.storyCopy h3 {
+  margin-bottom: var(--space-md);
+}
+
+.storyCopy p {
+  color: var(--color-charcoal-soft);
+  font-size: var(--text-lg);
+  line-height: var(--line-relaxed);
+}
+
+.partners {
+  padding-block: var(--space-3xl);
+  border-top: 1px solid rgba(24, 57, 43, 0.08);
+  background: var(--color-white);
+}
+
+.partnersLabel {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-soft);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.partnerList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xl) var(--space-2xl);
+}
+
+.partnerList li {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  color: rgba(24, 57, 43, 0.45);
+  white-space: nowrap;
+}
+
+.finalCta {
+  padding-block: var(--space-5xl);
+  background: linear-gradient(135deg, var(--color-sand) 0%, var(--color-ivory) 100%);
+  text-align: center;
+}
+
+.finalCta h2 {
+  margin-bottom: var(--space-md);
+  max-width: 20ch;
+  margin-inline: auto;
+}
+
+.finalCta p {
+  margin-inline: auto;
+  margin-bottom: var(--space-2xl);
+  color: var(--color-charcoal-soft);
+  font-size: var(--text-lg);
+}
+
+.finalActions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.finalOutline {
+  background: transparent;
+}
+
+.storyLayout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.prose {
+  color: var(--color-charcoal-soft);
+  font-size: var(--text-lg);
+  line-height: var(--line-relaxed);
+  margin-bottom: var(--space-lg);
+  max-width: 38rem;
+}
+
+.storyImage {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.values {
+  background: var(--color-white);
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.valueCard {
+  padding: var(--space-xl);
+  border-top: 3px solid var(--color-gold);
+  background: var(--color-ivory);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.valueCard h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.valueCard p {
+  font-size: var(--text-sm);
+  color: var(--color-charcoal-soft);
+  max-width: none;
+}
+
+.team {
+  background: var(--color-ivory);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+  margin-top: var(--space-2xl);
+}
+
+.member {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.memberOffset {
+  margin-top: var(--space-3xl);
+}
+
+.memberImage {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.role {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+
+.bio {
+  font-size: var(--text-sm);
+  color: var(--color-charcoal-soft);
+  line-height: var(--line-relaxed);
+  max-width: none;
+}
+
+.timeline {
+  background: var(--color-white);
+}
+
+@media (max-width: 900px) {
+  .missionGrid,
+  .story,
+  .storyLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .valueGrid,
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .member {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .memberOffset {
+    margin-top: 0;
+  }
+
+  .missionImageMain {
+    margin-left: 0;
+  }
+
+  .missionQuote {
+    position: relative;
+    bottom: auto;
+    margin-top: var(--space-lg);
+    max-width: none;
+  }
+
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .storyReverse {
+    direction: ltr;
+  }
+}

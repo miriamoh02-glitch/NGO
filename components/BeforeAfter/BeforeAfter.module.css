@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: ew-resize;
+  box-shadow: var(--shadow-lg);
+  touch-action: none;
+}
+
+.afterWrap,
+.beforeWrap {
+  position: absolute;
+  inset: 0;
+}
+
+.beforeWrap {
+  z-index: 2;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.label {
+  position: absolute;
+  bottom: var(--space-md);
+  padding: 0.35rem 0.75rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(24, 57, 43, 0.85);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+}
+
+.labelBefore {
+  left: var(--space-md);
+}
+
+.labelAfter {
+  right: var(--space-md);
+  z-index: 1;
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.handleBar {
+  position: absolute;
+  inset: 0;
+  width: 3px;
+  background: var(--color-white);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.handleKnob {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: var(--color-gold);
+  color: var(--color-forest);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}

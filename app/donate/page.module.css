@@ -1,0 +1,125 @@
+.tierGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.tier {
+  padding: var(--space-xl);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(24, 57, 43, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.tier:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.amount {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--color-gold-dark);
+}
+
+.tier h3 {
+  font-size: var(--text-xl);
+}
+
+.tier p {
+  font-size: var(--text-sm);
+  color: var(--color-charcoal-soft);
+  flex: 1;
+  max-width: none;
+}
+
+.sponsor {
+  background: var(--color-ivory);
+}
+
+.sponsorLayout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.sponsorText {
+  color: var(--color-charcoal-soft);
+  margin-bottom: var(--space-lg);
+  line-height: var(--line-relaxed);
+}
+
+.sponsorList {
+  margin-bottom: var(--space-xl);
+}
+
+.sponsorList li {
+  padding-left: var(--space-lg);
+  position: relative;
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-sm);
+}
+
+.sponsorList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-gold);
+  border-radius: 50%;
+}
+
+.sponsorAside {
+  padding: var(--space-xl);
+  background: var(--color-forest);
+  color: var(--color-sand);
+  border-radius: var(--radius-lg);
+}
+
+.sponsorAside h3 {
+  color: var(--color-white);
+  margin-bottom: var(--space-lg);
+  font-size: var(--text-xl);
+}
+
+.sponsorAside li {
+  font-size: var(--text-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(216, 198, 165, 0.2);
+}
+
+.volunteer {
+  background: var(--color-white);
+  text-align: center;
+}
+
+.volunteer .sectionIntro {
+  margin-inline: auto;
+}
+
+.faq {
+  background: var(--color-ivory);
+}
+
+@media (max-width: 900px) {
+  .tierGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sponsorLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tierGrid {
+    grid-template-columns: 1fr;
+  }
+}
