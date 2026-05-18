@@ -4,7 +4,6 @@ import Link from "next/link";
 import DonationCTA from "@/components/DonationCTA/DonationCTA";
 import Hero from "@/components/Hero/Hero";
 import ImpactStats from "@/components/ImpactStats/ImpactStats";
-import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import Timeline from "@/components/Timeline/Timeline";
@@ -12,7 +11,6 @@ import {
   communities,
   impactStats,
   partners,
-  projects,
   siteConfig,
   team,
   testimonials,
@@ -28,15 +26,15 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const featured = projects.slice(0, 3);
-
   return (
     <>
       <Hero
-        subtitle="Building dignity through infrastructure"
         title="Where communities rise, hope takes root"
         description={siteConfig.tagline}
+        image={images.hero.home}
+        imageAlt="Children laughing and reaching toward the camera with joy and hope"
         secondaryCta={{ label: "See our impact", href: "/projects#impact" }}
+        showScrollHint={false}
       />
 
       <section className={`section ${styles.mission}`} aria-labelledby="mission-heading">
@@ -62,19 +60,12 @@ export default function HomePage() {
                 <div className={styles.missionImageMain}>
                   <Image
                     src={images.mission}
-                    alt="Community members and volunteers at a school groundbreaking ceremony"
+                    alt="Children laughing and reaching toward the camera with joy"
                     fill
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className={styles.missionImg}
                   />
                 </div>
-                <blockquote className={styles.missionQuote}>
-                  <p>
-                    &ldquo;They did not give us a gift. They gave us a future
-                    our grandchildren will inherit.&rdquo;
-                  </p>
-                  <cite>— Village council, Kavango Region</cite>
-                </blockquote>
               </div>
             </div>
           </ScrollReveal>
@@ -107,7 +98,7 @@ export default function HomePage() {
               <div className={styles.storyImage}>
                 <Image
                   src={images.story}
-                  alt="Founding volunteers at the first school construction site in Malawi"
+                  alt="Students in uniform walking toward school with backpacks"
                   fill
                   sizes="(max-width: 768px) 100vw, 45vw"
                   className={styles.img}
@@ -142,29 +133,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={`section ${styles.projects}`} aria-labelledby="projects-heading">
-        <div className="container">
-          <ScrollReveal>
-            <div className={styles.sectionHeader}>
-              <div>
-                <p className="sectionLabel">Featured work</p>
-                <h2 id="projects-heading" className="sectionTitle">
-                  Infrastructure that transforms daily life
-                </h2>
-              </div>
-              <Link href="/projects" className="btn btnSecondary">
-                All projects & impact
-              </Link>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal stagger className={styles.projectGrid}>
-            {featured.map((project, i) => (
-              <ProjectCard key={project.id} project={project} featured={i === 0} />
-            ))}
-          </ScrollReveal>
-        </div>
-      </section>
-
       <section className={`section ${styles.stats}`} aria-label="Impact statistics">
         <div className="container">
           <ScrollReveal>
@@ -172,6 +140,11 @@ export default function HomePage() {
             <h2 className={`sectionTitle ${styles.statsTitle}`}>
               Numbers that represent real lives changed
             </h2>
+            <p className={styles.statsLink}>
+              <Link href="/projects" className="textLink">
+                Explore full projects and impact
+              </Link>
+            </p>
           </ScrollReveal>
           <ImpactStats stats={impactStats} />
         </div>
@@ -289,5 +262,4 @@ export default function HomePage() {
     </>
   );
 }
-
 
