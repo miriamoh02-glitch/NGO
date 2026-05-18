@@ -2,9 +2,10 @@ import { images } from "./images";
 
 export const siteConfig = {
   name: "Foundation Horizon",
+  url: "https://foundationhorizon.space",
   tagline:
     "A humanitarian organization dedicated to building schools, clinics, boreholes, and life-changing infrastructure for underserved communities.",
-  email: "hello@foundationhorizon.org",
+  email: "hello@foundationhorizon.space",
   phone: "+1 (555) 482-9100",
   address: "240 Meridian Way, Suite 400, Washington, DC 20005",
 };

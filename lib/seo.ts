@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { siteConfig } from "./data";
 
-/** Public site URL — set NEXT_PUBLIC_SITE_URL in production (no trailing slash). */
+/** Public site URL — override with NEXT_PUBLIC_SITE_URL if needed (no trailing slash). */
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://miriamoh02-glitch.github.io/NGO"
+  process.env.NEXT_PUBLIC_SITE_URL ?? siteConfig.url
 ).replace(/\/$/, "");
 
 export const defaultTitle = `${siteConfig.name} | Humanitarian Infrastructure NGO`;

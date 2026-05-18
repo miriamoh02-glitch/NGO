@@ -84,7 +84,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span style={{ color: "#b8965d", fontSize: 20, fontWeight: 600 }}>
-            foundationhorizon.org
+            foundationhorizon.space
           </span>
           <span style={{ color: "#8fb39a", fontSize: 18 }}>127 schools · 84 clinics · 312 boreholes</span>
         </div>
