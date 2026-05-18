@@ -27,7 +27,9 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   const schools = projects.filter((p) => p.category === "Education");
   const clinics = projects.filter((p) => p.category === "Healthcare");
-  const water = projects.filter((p) => p.category === "Water");
+  const water = projects.filter(
+    (p) => p.category === "Water" && p.id === "kavango-borehole"
+  );
 
   return (
     <>

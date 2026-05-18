@@ -290,12 +290,13 @@ export const faqs = [
 ];
 
 export const galleryImages = [
-  { src: images.gallery[0], alt: "Children learning together in a rural classroom" },
-  { src: images.gallery[1], alt: "Surgical team providing care in a community clinic" },
-  { src: images.gallery[2], alt: "Children at a community hand pump with clean water flowing" },
-  { src: images.gallery[3], alt: "Volunteers and locals building a school structure" },
-  { src: images.gallery[4], alt: "Teacher reading with young students outdoors" },
-  { src: images.gallery[5], alt: "Village gathering near new community infrastructure" },
+  {
+    src: images.gallery[0],
+    alt: "Children operating a community hand pump with clean water flowing",
+  },
+  { src: images.gallery[1], alt: "Volunteers and locals building a school structure" },
+  { src: images.gallery[2], alt: "Teacher reading with young students outdoors" },
+  { src: images.gallery[3], alt: "Village gathering near new community infrastructure" },
 ];
 
 export const beforeAfter = {
