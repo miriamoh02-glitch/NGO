@@ -1,13 +1,14 @@
 /** Local documentary-style photos (Unsplash, humanitarian themes) */
 export const images = {
   hero: {
-    home: "/images/hero-home.jpg",
+    home: "/images/hero-home.png",
     projects: "/images/hero-projects.jpg",
     donate: "/images/hero-donate.jpg",
     contact: "/images/hero-contact.jpg",
   },
   mission: "/images/mission.jpg",
   story: "/images/story-founders.jpg",
+  impactCommunityVoice: "/images/impact-community-voice.jpg",
   projects: {
     school1: "/images/project-school-1.jpg",
     school2: "/images/project-school-2.jpg",

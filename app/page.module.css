@@ -48,34 +48,13 @@
   box-shadow: var(--shadow-lg);
 }
 
-.missionQuote cite {
-  display: block;
-  margin-top: var(--space-md);
-  font-size: var(--text-xs);
-  font-style: normal;
-  font-family: var(--font-body);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-gold);
+.statsLink {
+  margin-bottom: var(--space-xl);
 }
 
-.projects {
-  background: var(--color-white);
-}
-
-.sectionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-2xl);
-  flex-wrap: wrap;
-}
-
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
+.statsLink .textLink {
+  color: var(--color-sand);
+  border-color: var(--color-gold);
 }
 
 .stats {
@@ -340,10 +319,6 @@
     bottom: auto;
     margin-top: var(--space-lg);
     max-width: none;
-  }
-
-  .projectGrid {
-    grid-template-columns: 1fr;
   }
 
   .storyReverse {

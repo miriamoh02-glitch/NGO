@@ -60,6 +60,46 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      <section
+        className={`section ${styles.featuredWork}`}
+        aria-labelledby="featured-work-heading"
+      >
+        <div className="container">
+          <ScrollReveal>
+            <p className="sectionLabel">Featured work</p>
+            <h2 id="featured-work-heading" className="sectionTitle">
+              Infrastructure that transforms daily life
+            </h2>
+            <p className={styles.featuredIntro}>
+              Every project begins with listening—and ends with infrastructure
+              communities protect for generations.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal>
+            <figure className={styles.communityVoice}>
+              <div className={styles.communityVoiceImage}>
+                <Image
+                  src={images.impactCommunityVoice}
+                  alt="Young women sitting together overlooking their community"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 900px"
+                  className={styles.img}
+                />
+                <figcaption className={styles.communityVoiceQuote}>
+                  <blockquote>
+                    <p>
+                      &ldquo;They did not give us a gift. They gave us a future
+                      our grandchildren will inherit.&rdquo;
+                    </p>
+                    <cite>— Village council, Kavango Region</cite>
+                  </blockquote>
+                </figcaption>
+              </div>
+            </figure>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <section className="section" aria-labelledby="schools-heading">
         <div className="container">
           <ScrollReveal>
@@ -222,6 +262,7 @@ export default function ProjectsPage() {
     </>
   );
 }
+
 
 
 

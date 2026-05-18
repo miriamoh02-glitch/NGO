@@ -19,7 +19,22 @@
 
 .image {
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center center;
+}
+
+.heroBranded .image {
+  object-fit: contain;
+  object-position: center center;
+  background: #1a1a1a;
+}
+
+.heroBranded .overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 57, 43, 0.25) 0%,
+    rgba(24, 57, 43, 0.55) 70%,
+    rgba(34, 34, 34, 0.85) 100%
+  );
 }
 
 .overlay {

@@ -16,6 +16,8 @@ interface HeroProps {
   secondaryCta?: { label: string; href: string };
   compact?: boolean;
   align?: "left" | "center";
+  showScrollHint?: boolean;
+  branded?: boolean;
 }
 
 export default function Hero({
@@ -23,11 +25,13 @@ export default function Hero({
   subtitle,
   description,
   image = images.hero.home,
-  imageAlt = "Children walking toward a newly built school at golden hour",
+  imageAlt = "Children smiling with the word Hope representing community resilience",
   primaryCta = { label: "Support our work", href: "/donate" },
   secondaryCta = { label: "See our impact", href: "/projects#impact" },
   compact = false,
   align = "left",
+  showScrollHint = false,
+  branded = false,
 }: HeroProps) {
   const mediaRef = useRef<HTMLDivElement>(null);
 
@@ -51,7 +55,7 @@ export default function Hero({
 
   return (
     <section
-      className={`${styles.hero} ${compact ? styles.compact : ""} ${styles[align]}`}
+      className={`${styles.hero} ${compact ? styles.compact : ""} ${styles[align]} ${branded ? styles.heroBranded : ""}`}
       aria-label="Hero"
     >
       <div className={styles.mediaWrap} ref={mediaRef}>
@@ -84,7 +88,7 @@ export default function Hero({
             )}
           </div>
         )}
-        {!compact && (
+        {!compact && showScrollHint && (
           <div className={styles.scrollHint} aria-hidden>
             <span>Scroll</span>
             <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
