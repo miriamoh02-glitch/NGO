@@ -1,9 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
+import JsonLd from "@/components/JsonLd/JsonLd";
 import Navbar from "@/components/Navbar/Navbar";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
-import { siteConfig } from "@/lib/data";
+import {
+  organizationJsonLd,
+  rootMetadata,
+  webSiteJsonLd,
+} from "@/lib/seo";
 import "./globals.css";
 import styles from "./layout.module.css";
 
@@ -21,31 +26,16 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: `${siteConfig.name} | Humanitarian Infrastructure`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.tagline,
-  keywords: [
-    "NGO",
-    "humanitarian",
-    "schools",
-    "clinics",
-    "boreholes",
-    "infrastructure",
-    "Africa",
-    "donate",
+export const metadata: Metadata = rootMetadata;
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#18392b" },
+    { media: "(prefers-color-scheme: dark)", color: "#18392b" },
   ],
-  openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.tagline,
-    type: "website",
-    locale: "en_US",
-  },
-  icons: {
-    icon: "/favicon.svg",
-  },
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -56,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body>
+        <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
         <a href="#main-content" className="skipLink">
           Skip to main content
         </a>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BeforeAfter from "@/components/BeforeAfter/BeforeAfter";
@@ -6,6 +5,7 @@ import DonationCTA from "@/components/DonationCTA/DonationCTA";
 import Gallery from "@/components/Gallery/Gallery";
 import Hero from "@/components/Hero/Hero";
 import ImpactStats from "@/components/ImpactStats/ImpactStats";
+import JsonLd from "@/components/JsonLd/JsonLd";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 import {
@@ -16,13 +16,30 @@ import {
   projects,
 } from "@/lib/data";
 import { images } from "@/lib/images";
+import {
+  breadcrumbJsonLd,
+  createPageMetadata,
+  ogImages,
+  webPageJsonLd,
+} from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+const projectsDescription =
+  "Explore Foundation Horizon schools, clinics, boreholes, impact metrics, field gallery, and community transformation programs across Africa.";
+
+export const metadata = createPageMetadata({
   title: "Projects & Impact",
-  description:
-    "Explore Foundation Horizon schools, clinics, boreholes, impact metrics, and community transformation across Africa.",
-};
+  description: projectsDescription,
+  path: "/projects",
+  ogImage: ogImages.projects,
+  keywords: [
+    "NGO projects Africa",
+    "school construction nonprofit",
+    "rural clinic programs",
+    "borehole water projects",
+    "community impact metrics",
+  ],
+});
 
 export default function ProjectsPage() {
   const schools = projects.filter((p) => p.category === "Education");
@@ -33,6 +50,19 @@ export default function ProjectsPage() {
 
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Projects & Impact",
+            description: projectsDescription,
+            path: "/projects",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Projects & Impact", path: "/projects" },
+          ]),
+        ]}
+      />
       <Hero
         compact
         align="center"

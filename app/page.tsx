@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import DonationCTA from "@/components/DonationCTA/DonationCTA";
 import Hero from "@/components/Hero/Hero";
+import JsonLd from "@/components/JsonLd/JsonLd";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 import Timeline from "@/components/Timeline/Timeline";
 import {
@@ -13,16 +13,34 @@ import {
   values,
 } from "@/lib/data";
 import { images } from "@/lib/images";
+import {
+  breadcrumbJsonLd,
+  createPageMetadata,
+  defaultDescription,
+  webPageJsonLd,
+} from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Home",
-  description: siteConfig.tagline,
-};
+  description: defaultDescription,
+  path: "/",
+  keywords: ["humanitarian NGO home", "community infrastructure nonprofit"],
+});
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: siteConfig.name,
+            description: defaultDescription,
+            path: "/",
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }]),
+        ]}
+      />
       <Hero
         title="Where communities rise, hope takes root"
         description={siteConfig.tagline}

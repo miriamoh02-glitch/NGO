@@ -1,0 +1,33 @@
+{
+  "name": "Foundation Horizon",
+  "short_name": "Foundation Horizon",
+  "description": "A humanitarian organization building schools, clinics, boreholes, and life-changing infrastructure for underserved communities.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f3ee",
+  "theme_color": "#18392b",
+  "lang": "en-US",
+  "categories": ["nonprofit", "charity", "humanitarian"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

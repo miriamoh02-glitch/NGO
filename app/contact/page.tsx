@@ -1,20 +1,50 @@
-import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import Hero from "@/components/Hero/Hero";
+import JsonLd from "@/components/JsonLd/JsonLd";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 import { siteConfig } from "@/lib/data";
 import { images } from "@/lib/images";
+import {
+  breadcrumbJsonLd,
+  contactPageJsonLd,
+  createPageMetadata,
+  ogImages,
+  webPageJsonLd,
+} from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+const contactDescription =
+  "Contact Foundation Horizon for donations, corporate partnerships, volunteer opportunities, media inquiries, and community program questions.";
+
+export const metadata = createPageMetadata({
   title: "Contact",
-  description:
-    "Contact Foundation Horizon for donations, partnerships, volunteer opportunities, and general inquiries.",
-};
+  description: contactDescription,
+  path: "/contact",
+  ogImage: ogImages.contact,
+  keywords: [
+    "contact humanitarian NGO",
+    "NGO partnership inquiry",
+    "volunteer with nonprofit Africa",
+  ],
+});
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Contact",
+            description: contactDescription,
+            path: "/contact",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+          contactPageJsonLd(),
+        ]}
+      />
       <Hero
         compact
         align="center"

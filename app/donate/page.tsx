@@ -1,22 +1,56 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import DonationCTA from "@/components/DonationCTA/DonationCTA";
 import FAQ from "@/components/FAQ/FAQ";
 import Hero from "@/components/Hero/Hero";
+import JsonLd from "@/components/JsonLd/JsonLd";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 import { donationTiers, faqs } from "@/lib/data";
 import { images } from "@/lib/images";
+import {
+  breadcrumbJsonLd,
+  createPageMetadata,
+  donationPageJsonLd,
+  faqPageJsonLd,
+  ogImages,
+  webPageJsonLd,
+} from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+const donateDescription =
+  "Donate to Foundation Horizon with transparent giving: 91 cents of every dollar funds schools, clinics, and clean water. View impact tiers and sponsorship options.";
+
+export const metadata = createPageMetadata({
   title: "Donate",
-  description:
-    "Support Foundation Horizon with transparent donations funding schools, clinics, and clean water. View impact tiers and sponsorship opportunities.",
-};
+  description: donateDescription,
+  path: "/donate",
+  ogImage: ogImages.donate,
+  keywords: [
+    "donate to NGO",
+    "charitable giving Africa",
+    "sponsor a school",
+    "fund clean water boreholes",
+    "nonprofit donation transparency",
+  ],
+});
 
 export default function DonatePage() {
   return (
     <>
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            title: "Donate",
+            description: donateDescription,
+            path: "/donate",
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Donate", path: "/donate" },
+          ]),
+          donationPageJsonLd(),
+          faqPageJsonLd(faqs),
+        ]}
+      />
       <Hero
         compact
         align="center"
