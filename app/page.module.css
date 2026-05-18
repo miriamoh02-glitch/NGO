@@ -48,84 +48,17 @@
   box-shadow: var(--shadow-lg);
 }
 
-.statsLink {
-  margin-bottom: var(--space-xl);
+.impactTeaser {
+  background: var(--color-white);
+  text-align: center;
 }
 
-.statsLink .textLink {
-  color: var(--color-sand);
-  border-color: var(--color-gold);
-}
-
-.stats {
-  background: var(--color-forest);
-  color: var(--color-sand);
-}
-
-.statsLabel {
-  color: var(--color-gold);
-}
-
-.statsTitle {
-  color: var(--color-white);
-  margin-bottom: var(--space-2xl);
-}
-
-.communities {
-  background: var(--color-ivory);
-}
-
-.storyList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4xl);
-  margin-top: var(--space-3xl);
-}
-
-.story {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: var(--space-2xl);
-  align-items: center;
-}
-
-.storyReverse {
-  direction: rtl;
-}
-
-.storyReverse > * {
-  direction: ltr;
-}
-
-.storyImage {
-  position: relative;
-  aspect-ratio: 7 / 5;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.storyImg {
-  object-fit: cover;
-}
-
-.storyStat {
-  display: inline-block;
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-gold-dark);
-  margin-bottom: var(--space-sm);
-}
-
-.storyCopy h3 {
-  margin-bottom: var(--space-md);
-}
-
-.storyCopy p {
+.impactTeaserText {
   color: var(--color-charcoal-soft);
   font-size: var(--text-lg);
-  line-height: var(--line-relaxed);
+  margin-inline: auto;
+  margin-bottom: var(--space-xl);
+  max-width: 32rem;
 }
 
 .partners {
@@ -321,7 +254,4 @@
     max-width: none;
   }
 
-  .storyReverse {
-    direction: ltr;
-  }
 }

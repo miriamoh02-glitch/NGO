@@ -3,17 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import DonationCTA from "@/components/DonationCTA/DonationCTA";
 import Hero from "@/components/Hero/Hero";
-import ImpactStats from "@/components/ImpactStats/ImpactStats";
 import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
-import Testimonials from "@/components/Testimonials/Testimonials";
 import Timeline from "@/components/Timeline/Timeline";
 import {
-  communities,
-  impactStats,
   partners,
   siteConfig,
   team,
-  testimonials,
   timelineMilestones,
   values,
 } from "@/lib/data";
@@ -133,53 +128,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={`section ${styles.stats}`} aria-label="Impact statistics">
+      <section className={styles.impactTeaser} aria-labelledby="impact-teaser-heading">
         <div className="container">
           <ScrollReveal>
-            <p className={`sectionLabel ${styles.statsLabel}`}>Measured impact</p>
-            <h2 className={`sectionTitle ${styles.statsTitle}`}>
-              Numbers that represent real lives changed
+            <p className="sectionLabel">Our work in the field</p>
+            <h2 id="impact-teaser-heading" className="sectionTitle">
+              See the infrastructure we build and the lives it changes
             </h2>
-            <p className={styles.statsLink}>
-              <Link href="/projects" className="textLink">
-                Explore full projects and impact
-              </Link>
+            <p className={styles.impactTeaserText}>
+              Explore schools, clinics, boreholes, and community stories on our
+              Projects and Impact page.
             </p>
+            <Link href="/projects" className="btn btnPrimary">
+              View projects and impact
+            </Link>
           </ScrollReveal>
-          <ImpactStats stats={impactStats} />
-        </div>
-      </section>
-
-      <section className={`section ${styles.communities}`} aria-labelledby="communities-heading">
-        <div className="container">
-          <ScrollReveal>
-            <p className="sectionLabel">Communities we have changed</p>
-            <h2 id="communities-heading" className="sectionTitle">
-              Stories written in brick, water, and resolve
-            </h2>
-          </ScrollReveal>
-          <div className={styles.storyList}>
-            {communities.map((item, i) => (
-              <ScrollReveal key={item.name}>
-                <article className={`${styles.story} ${i % 2 === 1 ? styles.storyReverse : ""}`}>
-                  <div className={styles.storyImage}>
-                    <Image
-                      src={item.image}
-                      alt={`Community transformation in ${item.name}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className={styles.storyImg}
-                    />
-                  </div>
-                  <div className={styles.storyCopy}>
-                    <span className={styles.storyStat}>{item.stat}</span>
-                    <h3>{item.name}</h3>
-                    <p>{item.story}</p>
-                  </div>
-                </article>
-              </ScrollReveal>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -229,8 +192,6 @@ export default function HomePage() {
       </section>
 
       <DonationCTA />
-
-      <Testimonials items={testimonials} />
 
       <section className={styles.partners} aria-label="Partner organizations">
         <div className="container">
