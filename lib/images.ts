@@ -40,8 +40,8 @@ export const images = {
     "/images/gallery-6.jpg",
   ],
   beforeAfter: {
-    before: "/images/before-village.jpg",
-    after: "/images/after-village.jpg",
+    before: "/images/before-water.jpg",
+    after: "/images/after-water-pump.jpg",
   },
   team: [
     "/images/team-1.jpg",
