@@ -294,19 +294,18 @@ export const galleryImages = [
     src: images.gallery[0],
     alt: "Children operating a community hand pump with clean water flowing",
   },
-  { src: images.gallery[1], alt: "Volunteers and locals building a school structure" },
-  { src: images.gallery[2], alt: "Teacher reading with young students outdoors" },
-  { src: images.gallery[3], alt: "Village gathering near new community infrastructure" },
+  { src: images.gallery[1], alt: "Young people gathered overlooking a lake at sunset" },
+  { src: images.gallery[2], alt: "Village gathering near new community infrastructure" },
 ];
 
 export const beforeAfter = {
   before: {
     src: images.beforeAfter.before,
-    alt: "Child holding glasses of contaminated water before clean water access",
+    alt: "Cleared land with smoldering stumps and smoke from deforestation before restoration",
   },
   after: {
     src: images.beforeAfter.after,
-    alt: "Children operating a community hand pump with clean water flowing",
+    alt: "Restored forest with sunlight streaming through the canopy after Greenfield Village work",
   },
 };
 
@@ -328,7 +327,7 @@ export const communities = [
   {
     name: "Greenfield cooperative",
     story:
-      "Women-led market stalls beside the new clinic fund school meals. The village repaid its micro-loan in fourteen months.",
+      "A women's market collective beside the new clinic now helps fund daily school meals. The community fully repaid its village micro-loan in fourteen months.",
     stat: "Self-sustaining",
     image: images.communities.market,
   },

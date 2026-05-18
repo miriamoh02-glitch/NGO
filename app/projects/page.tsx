@@ -157,8 +157,8 @@ export default function ProjectsPage() {
               Greenfield Village: before and after
             </h2>
             <p className={styles.beforeAfterIntro}>
-              Drag the slider to see how integrated infrastructure reshaped a
-              settlement in eighteen months.
+              Drag the slider to see how reforestation and village infrastructure
+              transformed this landscape in eighteen months.
             </p>
           </ScrollReveal>
           <BeforeAfter before={beforeAfter.before} after={beforeAfter.after} />

@@ -34,12 +34,11 @@ export const images = {
   gallery: [
     "/images/gallery-water-pump.jpg",
     "/images/gallery-4.jpg",
-    "/images/gallery-5.jpg",
     "/images/gallery-6.jpg",
   ],
   beforeAfter: {
-    before: "/images/before-water.jpg",
-    after: "/images/after-water-pump.jpg",
+    before: "/images/before-greenfield.jpg",
+    after: "/images/after-greenfield.jpg",
   },
   team: [
     "/images/team-1.jpg",
